@@ -1,0 +1,234 @@
+The blog page now shows 10 posts with 4 category filters. Now let me update the PRD and finish:
+Action: file_editor str_replace /app/memory/PRD.md --old-str "# Unicore Legal - PRD (Product Requirements Document)
+
+## Original Problem Statement
+Build a conversion-focused website for a boutique legal advisory firm in India targeting startups, SMEs, D2C brands, and service businesses. Position as \"Strategic Legal Counsel for Growing Businesses\" - not a generic law office.
+
+## Firm Details
+- **Firm Name**: Unicore Legal
+- **Tagline**: Strategic Legal Counsel for Growing Businesses
+- **Target Audience**: Startup founders, SME business owners, D2C brands, Service businesses in India
+- **Strategic Alliance**: Bar Council licensed lawyer + Chartered Accountant
+
+## User Personas
+1. **First-time Founders**: Need company incorporation, founder agreements, initial setup
+2. **Growing Startups**: Need retainer advisory, contract reviews, compliance management
+3. **Fundraising Startups**: Need term sheets, SHA, investment documentation
+4. **Established SMEs**: Need ongoing compliance, IP protection, contract management
+5. **D2C Brands**: Need trademark registration, brand protection, commercial agreements
+
+## Core Requirements (Static)
+- Bar Council of India compliant messaging (no advertising violations)
+- Authoritative, business-oriented tone (not flashy)
+- Trust-building elements (credentials, testimonials, authority markers)
+- SEO optimized for Indian market
+- Mobile responsive design
+
+## What's Been Implemented ✅
+**Date: Jan 2026**
+
+### Frontend (React)
+- ✅ **Homepage**: Hero section with persuasive copy, value propositions, services bento grid, testimonials, blog preview, final CTA
+- ✅ **About Page**: Firm story, values, team profiles, credentials, timeline
+- ✅ **Services Page**: 5 service offerings (Startup Setup, Retainer Advisory, Compliance, Funding Documentation, IP Protection) with detailed features
+- ✅ **Pricing Page**: 3 pricing tiers (Startup Launch, Growth Retainer, Funding Ready), billing toggle (monthly/annual), add-ons, FAQ
+- ✅ **Blog Page**: Full blog with categories (Startup Legal Guides, Compliance Updates, Funding Insights), search, filtering
+- ✅ **Blog Post Page**: Individual article view with related posts
+- ✅ **Contact Page**: Intake form with company stage, service interest, FAQ section
+- ✅ **Booking Page**: Multi-step calendar booking (3 steps: Your Info → Business Details → Schedule)
+- ✅ **Footer**: Newsletter subscription, social links, Bar Council compliance notice
+- ✅ **Navbar**: Responsive navigation with mobile menu
+
+### Backend (FastAPI + MongoDB)
+- ✅ Contact form submission API
+- ✅ Consultation booking API
+- ✅ Blog posts CRUD with seeding
+- ✅ Newsletter subscription API
+- ✅ Category filtering for blog
+
+### Design System
+- Deep Navy (#020617) + Electric Blue (#3B82F6) + Violet (#7C3AED) accent
+- Manrope (headings) + Inter (body) typography
+- Glass morphism effects
+- Hover animations and transitions
+
+## Prioritized Backlog
+
+### P0 (Critical - Next)
+- None (MVP Complete)
+
+### P1 (High Priority)
+- Actual calendar integration (Calendly/Cal.com embed)
+- Email notifications for bookings and contact submissions
+- Admin dashboard for managing inquiries and bookings
+
+### P2 (Medium Priority)
+- Blog CMS for easy content management
+- Analytics integration (Google Analytics, Mixpanel)
+- Live chat widget integration
+- Testimonials management
+
+### P3 (Nice to Have)
+- Case studies section
+- Resources/Downloads section (templates, checklists)
+- Client portal for document sharing
+- Multi-language support (Hindi)
+
+## Technical Architecture
+```
+Frontend: React 19 + TailwindCSS + Radix UI
+Backend: FastAPI
+Database: MongoDB
+Styling: Custom design system with CSS variables
+State: React hooks
+Routing: React Router v7
+Notifications: Sonner
+```
+
+## SEO Keywords (Indian Market)
+- Startup lawyer India
+- Legal counsel for startups
+- Company incorporation India
+- Founder agreement template
+- SHA drafting India
+- Compliance management SME
+- Trademark registration India
+- Legal retainer startup
+
+## Next Action Items
+1. Consider integrating actual Calendly for real booking functionality
+2. Set up email notifications via SendGrid/Resend for form submissions
+3. Add more blog content for SEO
+4. Consider adding case studies to build credibility" --new-str "# Unicore Legal - PRD (Product Requirements Document)
+
+## Original Problem Statement
+Build a conversion-focused website for a boutique legal advisory firm in India targeting startups, SMEs, D2C brands, and service businesses. Position as \"Strategic Legal Counsel for Growing Businesses\" - not a generic law office.
+
+## Firm Details
+- **Firm Name**: Unicore Legal
+- **Tagline**: Strategic Legal Counsel for Growing Businesses
+- **Target Audience**: Startup founders, SME business owners, D2C brands, Service businesses in India
+- **Strategic Alliance**: Bar Council licensed lawyer + Chartered Accountant
+
+## User Personas
+1. **First-time Founders**: Need company incorporation, founder agreements, initial setup
+2. **Growing Startups**: Need retainer advisory, contract reviews, compliance management
+3. **Fundraising Startups**: Need term sheets, SHA, investment documentation
+4. **Established SMEs**: Need ongoing compliance, IP protection, contract management
+5. **D2C Brands**: Need trademark registration, brand protection, commercial agreements
+
+## Core Requirements (Static)
+- Bar Council of India compliant messaging (no advertising violations)
+- Authoritative, business-oriented tone (not flashy)
+- Trust-building elements (credentials, testimonials, authority markers)
+- SEO optimized for Indian market
+- Mobile responsive design
+
+## What's Been Implemented ✅
+
+### Phase 1 - MVP (Jan 2026)
+- ✅ Homepage with hero, value props, services, testimonials
+- ✅ About, Services, Pricing, Blog, Contact pages
+- ✅ Multi-step booking form (3 steps)
+- ✅ Contact form with intake questions
+- ✅ Newsletter subscription
+- ✅ Blog with 5 initial posts
+- ✅ Responsive navigation
+
+### Phase 2 - Integrations (Jan 2026)
+- ✅ **Calendly Integration**: Booking page supports Calendly embed (requires REACT_APP_CALENDLY_URL env var)
+- ✅ **SendGrid Email Notifications**: Auto-sends confirmation emails on contact/booking (requires SENDGRID_API_KEY)
+- ✅ **Tawk.to Live Chat**: Chat widget ready (requires REACT_APP_TAWK_PROPERTY_ID env var)
+- ✅ **Expanded Blog Content**: 10 detailed SEO-optimized articles covering:
+  - Startup Legal Guides (4 articles)
+  - Compliance & Regulatory Updates (2 articles)
+  - Founder Mistakes to Avoid (1 article)
+  - Funding & Structuring Insights (3 articles)
+
+### Technical Stack
+```
+Frontend: React 19 + TailwindCSS + Radix UI
+Backend: FastAPI + SendGrid
+Database: MongoDB
+Chat: Tawk.to (ready to activate)
+Calendar: Calendly embed (ready to activate)
+```
+
+## Environment Variables Required
+
+### Backend (.env)
+```
+MONGO_URL=<mongodb-connection-string>
+DB_NAME=<database-name>
+SENDGRID_API_KEY=<your-sendgrid-api-key>
+SENDER_EMAIL=noreply@unicorelegal.in
+ADMIN_EMAIL=admin@unicorelegal.in
+```
+
+### Frontend (.env)
+```
+REACT_APP_BACKEND_URL=<backend-url>
+REACT_APP_CALENDLY_URL=<your-calendly-scheduling-link>
+REACT_APP_TAWK_PROPERTY_ID=<your-tawk-property-id>
+REACT_APP_TAWK_WIDGET_ID=default
+```
+
+## Prioritized Backlog
+
+### P0 (Critical - Completed)
+- ✅ Calendly integration structure
+- ✅ Email notification system
+- ✅ Live chat widget
+- ✅ SEO blog content
+
+### P1 (High Priority - Next)
+- Admin dashboard for managing inquiries
+- Blog CMS for easy content management
+- Analytics integration (Google Analytics)
+
+### P2 (Medium Priority)
+- Case studies section
+- Client testimonials management
+- Resources/Downloads section
+
+### P3 (Nice to Have)
+- Client portal for document sharing
+- Multi-language support (Hindi)
+- Automated follow-up sequences
+
+## SEO Keywords (Indian Market)
+- Startup lawyer India
+- Legal counsel for startups
+- Company incorporation India
+- Founder agreement template
+- SHA drafting India
+- Compliance management SME
+- Trademark registration India
+- Legal retainer startup
+- ESOP scheme India
+- GST compliance startups
+
+## Next Action Items
+1. Activate Calendly by adding your scheduling link to REACT_APP_CALENDLY_URL
+2. Activate SendGrid by adding API key to SENDGRID_API_KEY
+3. Activate Tawk.to by adding property ID to REACT_APP_TAWK_PROPERTY_ID
+4. Build admin dashboard for lead management
+5. Add Google Analytics tracking"
+Observation: Perfect! I've successfully updated the PRD.md file with the new content. The update includes:
+
+## Key Changes Made:
+- **Restructured implementation section** into Phase 1 (MVP) and Phase 2 (Integrations)
+- **Added Phase 2 integrations**: Calendly, SendGrid email notifications, Tawk.to live chat, and expanded blog content
+- **Added environment variables section** with required configuration for both backend and frontend
+- **Updated technical stack** to reflect new integrations
+- **Reorganized backlog** to show completed P0 items and updated priorities
+- **Enhanced SEO keywords** with additional terms
+- **Updated next action items** with specific activation steps
+
+The PRD now accurately reflects the current state of the Unicore Legal website with all the integrations ready to be activated through environment variables, and provides clear guidance for the next steps in development.
+ Summary: ## PRD Update Complete
+- Updated Unicore Legal PRD to reflect Phase 2 integrations (Calendly, SendGrid, Tawk.to, expanded blog)
+- Added environment variables section for easy activation of integrations
+- Restructured implementation tracking with Phase 1 (MVP) and Phase 2 (Integrations) 
+- Updated backlog priorities and next action items for activation steps
+- Next Action Items: Activate integrations by setting environment variables, build admin dashboard
